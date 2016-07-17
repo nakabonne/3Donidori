@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class RightScript : MonoBehaviour {
 
 	public static int right;
-	public static GameObject activeright;
+	public  GameObject rightButton;
+	LeftScript _left;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,11 +21,15 @@ public class RightScript : MonoBehaviour {
 	public void Right()
 	{
 		//プレイヤーが右にいく
-		PlayerScript.migi = true;
+		//PlayerScript.migi = true;
 		//このボタンを非表示に
 		gameObject.SetActive (false);
 		//左のボタンを表示させてるつもり、、
-		LeftScript.activeleft.SetActive (true);
+		_left.leftButton.SetActive(true);
+		//static変数使わなくていの？
+		Debug.Log("右ボタン");
+
 
 	}
 }
+*/
