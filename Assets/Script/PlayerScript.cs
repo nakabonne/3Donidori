@@ -4,6 +4,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerScript : MonoBehaviour {
 
+	GameManager gamemanager;
+	public GameObject GBtext;
 	float speed = 13.0f;
 	bool migi;
 	//int houkou;
@@ -13,13 +15,16 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		//houkou = 0;
 		migi = false;
+		//GBtextには、GameManagerスクリプトがついたオブジェクトを代入する
+		gamemanager = GBtext.GetComponent<GameManager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		//常に前へ進む
 		transform.position += transform.forward * speed * Time.deltaTime;
-
+		//タッチすると方向転換
 		if (Input.GetMouseButtonDown (0)) 
 		{
 			if (!migi)
@@ -97,6 +102,16 @@ public class PlayerScript : MonoBehaviour {
 
 	void False(){
 		migi = false;
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		//敵に当たッたときの処理
+		if (other.gameObject.tag == "Enemy") 
+		{
+			Debug.Log ("enemy!!");
+			gamemanager.GameOver ();
+		}
 	}
 	//タッチで方向転換をする
 	/*IEnumerator Houkoutenkan()
