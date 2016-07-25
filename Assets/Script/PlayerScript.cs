@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
 
 	GameManager gamemanager;
 	public GameObject GBtext;
-	float speed = 13.0f;
+	float speed = 40.0f;
 	bool migi;
 	//int houkou;
 
@@ -48,11 +48,11 @@ public class PlayerScript : MonoBehaviour
 
 				if(migi)
 			    {
-				transform.Rotate(new Vector3(0,90,0));
+				transform.Rotate(new Vector3(0,60,0));
 				}
 			    else
 			    {
-				transform.Rotate(new Vector3(0,-90,0));
+				transform.Rotate(new Vector3(0,-60,0));
 				}
 				migi = !migi;
 
@@ -77,6 +77,7 @@ public class PlayerScript : MonoBehaviour
 		{
 			Debug.Log ("enemy!!");
 			gamemanager.GameOver ();
+			speed = 0.0f;
 		}
 	}
 
