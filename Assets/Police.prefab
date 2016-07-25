@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493404}
   - 95: {fileID: 9513366}
+  - 65: {fileID: 6586430}
   m_Layer: 0
   m_Name: Police
   m_TagString: Enemy
@@ -2185,6 +2186,18 @@ Transform:
   - {fileID: 406142}
   m_Father: {fileID: 486984}
   m_RootOrder: 0
+--- !u!65 &6586430
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.4, z: 0.7}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &9513366
 Animator:
   serializedVersion: 3
