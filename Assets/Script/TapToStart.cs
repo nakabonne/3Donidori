@@ -4,6 +4,8 @@ using System.Collections;
 public class TapToStart : MonoBehaviour {
 
 	public GameObject player;
+	public GameObject tapLabel;
+	public GameObject thisButton;
 
 	// Use this for initialization
 	void Start () {
@@ -19,5 +21,7 @@ public class TapToStart : MonoBehaviour {
 	public void Tap()
 	{
 		player.SendMessage ("Playing");
+		Destroy (tapLabel);
+		Destroy (thisButton);
 	}
 }

@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour 
 {
 
 	GameManager gamemanager;
 	public GameObject GBtext;
-	float speed = 60.0f;
+	float speed = 40.0f;
 	bool migi;
-	bool playing;
+	public bool playing;
 	//int houkou;
 
 
@@ -65,6 +65,7 @@ public class PlayerScript : MonoBehaviour
 			Debug.Log ("enemy!!");
 			gamemanager.GameOver ();
 			speed = 0.0f;
+			SceneManager.LoadScene ("Result");
 		}
 	}
 

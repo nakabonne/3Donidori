@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Sceane/Stage1.unity
   - enabled: 1
     path: Assets/Sceane/Title.unity
+  - enabled: 1
+    path: Assets/Sceane/Result.unity
