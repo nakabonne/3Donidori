@@ -7,8 +7,9 @@ public class PlayerScript : MonoBehaviour
 
 	GameManager gamemanager;
 	public GameObject GBtext;
-	float speed = 40.0f;
+	float speed = 60.0f;
 	bool migi;
+	bool playing;
 	//int houkou;
 
 
@@ -16,6 +17,7 @@ public class PlayerScript : MonoBehaviour
 	void Start () {
 		//houkou = 0;
 		migi = false;
+		playing = false;
 		//GBtextには、GameManagerスクリプトがついたオブジェクトを代入する
 		gamemanager = GBtext.GetComponent<GameManager> ();
 	}
@@ -23,45 +25,30 @@ public class PlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		//常に前へ進む
-		transform.position += transform.forward * speed * Time.deltaTime;
-		//タッチすると方向転換
-		if (Input.GetMouseButtonDown (0)) 
-		{
-			/*if (!migi)
+		if (playing) {
+			//常に前へ進む
+			transform.position += transform.forward * speed * Time.deltaTime;
+			//タッチすると方向転換
+			if (Input.GetMouseButtonDown (0)) 
 			{
-				transform.Rotate (new Vector3 (0, -90, 0));
-				Debug.Log ("右");
-				//migi = true;
-				Invoke("True",0.00000001f);
-			}
-			if (migi) 
-			{
-				transform.Rotate (new Vector3 (0, 90, 0));
-				Debug.Log ("左");
-				Invoke ("False",0.00000001f);
-				//migi = false;
-
-			}*/
-
-
-
-				if(migi)
-			    {
-				transform.Rotate(new Vector3(0,60,0));
-				}
-			    else
-			    {
-				transform.Rotate(new Vector3(0,-60,0));
+				
+				if (migi) {
+					transform.Rotate (new Vector3 (0, 60, 0));
+				} else {
+					transform.Rotate (new Vector3 (0, -60, 0));
 				}
 				migi = !migi;
 
+			}
 		}
 
 	}
 
 
-		
+	void Playing()
+	{
+		playing = true;
+	}
 
 
 			
