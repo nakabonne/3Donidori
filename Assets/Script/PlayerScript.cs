@@ -41,6 +41,8 @@ public class PlayerScript : MonoBehaviour
 
 			}
 		}
+		//だんだんスピード上げる
+		speed += 1.0f * Time.deltaTime;
 
 	}
 
