@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class TitleGameManagerScript : MonoBehaviour {
+public class RetryButtonScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class TitleGameManagerScript : MonoBehaviour {
 	
 	}
 
-	public void StartButton()
+	public void Retry()
 	{
 		SceneManager.LoadScene ("Stage1");
 		AllGameManager.instance.playing = false;

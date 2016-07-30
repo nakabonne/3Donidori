@@ -3,13 +3,14 @@ using System.Collections;
 
 public class TapToStart : MonoBehaviour {
 
-	public GameObject player;
+	GameObject allgameMN;
 	public GameObject tapLabel;
-	public GameObject thisButton;
+	//public GameObject thisButton;＜＝ボタンはとりあえず消さない
+	public GameObject explain;
 
 	// Use this for initialization
 	void Start () {
-		
+		allgameMN = GameObject.Find("AllGameManager");
 	
 	}
 	
@@ -20,8 +21,9 @@ public class TapToStart : MonoBehaviour {
 
 	public void Tap()
 	{
-		player.SendMessage ("Playing");
+		allgameMN.SendMessage ("Playing");
 		Destroy (tapLabel);
-		Destroy (thisButton);
+		//Destroy (thisButton);
+		Destroy (explain);
 	}
 }

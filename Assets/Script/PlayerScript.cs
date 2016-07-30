@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 public class PlayerScript : MonoBehaviour 
 {
 
-	GameManager gamemanager;
-	public GameObject GBtext;
+
+	//public GameObject GBtext;
 	float speed = 40.0f;
 	bool migi;
-	public bool playing;
+
 	//int houkou;
 
 
@@ -17,15 +17,14 @@ public class PlayerScript : MonoBehaviour
 	void Start () {
 		//houkou = 0;
 		migi = false;
-		playing = false;
-		//GBtextには、GameManagerスクリプトがついたオブジェクトを代入する
-		gamemanager = GBtext.GetComponent<GameManager> ();
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (playing) {
+		if (AllGameManager.instance.playing) {
 			//常に前へ進む
 			transform.position += transform.forward * speed * Time.deltaTime;
 			//タッチすると方向転換
@@ -47,10 +46,7 @@ public class PlayerScript : MonoBehaviour
 	}
 
 
-	void Playing()
-	{
-		playing = true;
-	}
+
 
 
 			
@@ -65,7 +61,7 @@ public class PlayerScript : MonoBehaviour
 		if (other.gameObject.tag == "Enemy") 
 		{
 			Debug.Log ("enemy!!");
-			gamemanager.GameOver ();
+
 			speed = 0.0f;
 			SceneManager.LoadScene ("Result");
 		}
