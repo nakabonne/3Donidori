@@ -5,7 +5,7 @@ public class AllGameManager : MonoBehaviour {
 
 	public static AllGameManager instance = null;
 	public float distance;
-	public float highScore = 0;
+	public float highScore = 0.0f;
 	public bool playing;
 
 
@@ -36,6 +36,7 @@ public class AllGameManager : MonoBehaviour {
 	}
 	//ハイスコアの記録を更新する
 	public void SetScore(float myScore){
+		//myScore = distance;
 		if (!PlayerPrefs.HasKey ("HIGHSCORE")) {
 			Clear ();
 		}
@@ -44,6 +45,7 @@ public class AllGameManager : MonoBehaviour {
 			highScore = myScore;
 		}
 		Save();
+		Debug.Log ("シングルトン");
 	}
 
 	void Playing()
