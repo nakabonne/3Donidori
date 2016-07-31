@@ -423,8 +423,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.999985, y: -0.000036240024}
-  m_SizeDelta: {x: 372, y: 154}
+  m_AnchoredPosition: {x: 0.75001, y: 4}
+  m_SizeDelta: {x: 499.5, y: 163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229633227
 MonoBehaviour:
@@ -567,6 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreLabel: {fileID: 1248747823}
+  highScoreLabel: {fileID: 1229633227}
 --- !u!4 &1576613938
 Transform:
   m_ObjectHideFlags: 0

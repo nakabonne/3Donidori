@@ -18,5 +18,6 @@ public class RetryButtonScript : MonoBehaviour {
 	{
 		SceneManager.LoadScene ("Stage1");
 		AllGameManager.instance.playing = false;
+
 	}
 }

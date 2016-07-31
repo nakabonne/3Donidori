@@ -19,7 +19,7 @@ public class ResultGameManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		scoreLabel.text = AllGameManager.instance.distance.ToString ("f1") + "km";
-		highScoreLabel.text = AllGameManager.instance.highScore.ToString("f1") + "km";
+		highScoreLabel.text = "ハイスコア" + AllGameManager.instance.highScore.ToString("f1") + "km";
 		//highScoreLabel = AllGameManager.instance.highScore.ToString("f1") + "km";
 	
 	}

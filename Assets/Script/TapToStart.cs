@@ -21,6 +21,10 @@ public class TapToStart : MonoBehaviour {
 
 	public void Tap()
 	{
+		//リトライ時に前回のスコアをリセットする
+		if (AllGameManager.instance.playing == false) {
+			AllGameManager.instance.distance = 0.0f;
+		}
 		allgameMN.SendMessage ("Playing");
 		Destroy (tapLabel);
 		//Destroy (thisButton);
