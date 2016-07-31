@@ -1128,18 +1128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda4eb132478d408ba28aa17b46b38cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &183986497
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 183986495}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &183986498 stripped
 Transform:
   m_PrefabParentObject: {fileID: 460426, guid: 244e2e913df9ec8488fa7bd90d85eb8e, type: 2}
@@ -1258,6 +1246,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &209249486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 209249487}
+  - 135: {fileID: 209249488}
+  m_Layer: 0
+  m_Name: Sensa
+  m_TagString: sensa
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &209249487
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209249486}
+  m_LocalRotation: {x: -0.27915588, y: 0.24777476, z: -0.0747996, w: 0.9247079}
+  m_LocalPosition: {x: 0.2292347, y: 3.4534082, z: 32.758266}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalEulerAnglesHint: {x: -28.6337, y: 34.7272, z: -18.3743}
+  m_Children: []
+  m_Father: {fileID: 663783728}
+  m_RootOrder: 1
+--- !u!135 &209249488
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209249486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 16
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &211531266
 Prefab:
   m_ObjectHideFlags: 0
@@ -3235,7 +3264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460426, guid: 244e2e913df9ec8488fa7bd90d85eb8e, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 460426, guid: 244e2e913df9ec8488fa7bd90d85eb8e, type: 2}
       propertyPath: m_LocalScale.x
@@ -3542,6 +3571,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 11.049939, z: 9.12636}
   m_Center: {x: -9.8143175e-15, y: 5.5249696, z: 0.40749907}
+--- !u!4 &663783728 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
+  m_PrefabInternal: {fileID: 1822355159}
 --- !u!1001 &663862339
 Prefab:
   m_ObjectHideFlags: 0

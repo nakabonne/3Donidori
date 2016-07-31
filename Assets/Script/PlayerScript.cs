@@ -60,7 +60,7 @@ public class PlayerScript : MonoBehaviour
 		//敵に当たッたときの処理
 		if (other.gameObject.tag == "Enemy") 
 		{
-			Debug.Log ("enemy!!");
+			
 
 			speed = 0.0f;
 			SceneManager.LoadScene ("Result");

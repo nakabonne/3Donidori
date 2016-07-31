@@ -7,6 +7,7 @@ public class EnemyScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		animator = GetComponent<Animator> ();
 	
 	}
 	
@@ -17,7 +18,7 @@ public class EnemyScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Player") {
+		if (other.gameObject.tag == "sensa") {
 			animator.SetTrigger ("move");
 		}
 	}
